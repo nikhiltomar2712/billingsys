@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billing System - Java Swing</title>
+  <script src="https://cjrtnc.leaningtech.com/4.3/loader.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #ccffff; margin: 0; padding: 16px; text-align: center; }
+    h2 { margin: 6px 0; color: #0b2a6f; }
+    p  { margin: 4px 0 12px; color: #333; font-size: 14px; }
+    #box { display: inline-block; overflow: auto; max-width: 100%; background: #fff; border: 1px solid #000; }
+  </style>
+</head>
+<body>
+  <h2>Mini Mart - Billing System</h2>
+  <p>Java Swing project running in the browser (CheerpJ). The first load takes a few seconds.</p>
+  <div id="box"></div>
+
+  <script>
+    (async () => {
+      await cheerpjInit();
+      cheerpjCreateDisplay(1000, 720, document.getElementById("box"));
+      await cheerpjRunJar("/app/BillingSystem.jar");
+    })();
+  </script>
+</body>
+</html>
