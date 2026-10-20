@@ -21,7 +21,10 @@
     (async () => {
       await cheerpjInit();
       cheerpjCreateDisplay(1000, 720, document.getElementById("box"));
-      await cheerpjRunJar("/app/BillingSystem.jar");
+
+      // Build the jar path from wherever this page is served (e.g. /billingsys/)
+      const base = location.pathname.replace(/[^/]*$/, "");
+      await cheerpjRunJar("/app" + base + "BillingSystem.jar");
     })();
   </script>
 </body>
